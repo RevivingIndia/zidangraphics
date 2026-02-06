@@ -27,21 +27,21 @@ export default function ContactPage() {
             <ul className="space-y-3 text-gray-700">
               <li className="flex gap-3">
                 <span className="font-medium shrink-0">Address:</span>
-                <span>123 Print Street, Industrial Area, City – 1100XX</span>
+                <span>Shop No 3 Opp Fakhruddin Plaza, Langertoli, Patna 04</span>
               </li>
               <li className="flex gap-3">
                 <span className="font-medium shrink-0">Phone:</span>
-                <a href="tel:+919876543210" className="text-[#c41e3a] hover:underline">
-                  +91 98765 43210
+                <a href="tel:+918083955264" className="text-[#c41e3a] hover:underline">
+                  8083955264
                 </a>
               </li>
               <li className="flex gap-3">
                 <span className="font-medium shrink-0">Email:</span>
                 <a
-                  href="mailto:hello@zidangraphics.com"
+                  href="mailto:zidaan.graphic@gmail.com"
                   className="text-[#c41e3a] hover:underline"
                 >
-                  hello@zidangraphics.com
+                  zidaan.graphic@gmail.com
                 </a>
               </li>
             </ul>
@@ -89,8 +89,8 @@ export default function ContactPage() {
           <p>
             We welcome clients who prefer to discuss their requirements in person
             or want to see samples and paper options. Our facility is located at
-            123 Print Street in the Industrial Area, and we have a dedicated
-            reception and meeting space. We recommend scheduling a visit in
+            Shop No 3, Opp Fakhruddin Plaza, Langertoli, Patna 04, and we have a
+            dedicated reception and meeting space. We recommend scheduling a visit in
             advance so that the right team members are available and we can
             prepare relevant samples or proofs. During your visit you can see our
             production floor (subject to safety and operational constraints),

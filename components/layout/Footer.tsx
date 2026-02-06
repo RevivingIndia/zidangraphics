@@ -83,18 +83,18 @@ export default function Footer() {
             <ul className="mt-3 space-y-3 text-sm">
               <li className="flex items-center gap-2">
                 <MapPin className="h-4 w-4 shrink-0 text-[#c41e3a]" />
-                <span>123 Print Street, Industrial Area, City – 1100XX</span>
+                <span>Shop No 3 Opp Fakhruddin Plaza, Langertoli, Patna 04</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 shrink-0 text-[#c41e3a]" />
-                <a href="tel:+919876543210" className="hover:text-white">
-                  +91 98765 43210
+                <a href="tel:+918083955264" className="hover:text-white">
+                  8083955264
                 </a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 shrink-0 text-[#c41e3a]" />
-                <a href="mailto:hello@zidangraphics.com" className="hover:text-white">
-                  hello@zidangraphics.com
+                <a href="mailto:zidaan.graphic@gmail.com" className="hover:text-white">
+                  zidaan.graphic@gmail.com
                 </a>
               </li>
             </ul>
