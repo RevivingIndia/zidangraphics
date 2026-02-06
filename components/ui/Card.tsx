@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { forwardRef } from "react";
 import { cn } from "@/lib/utils";
@@ -38,11 +39,13 @@ export const CardImage = ({
   alt: string;
   className?: string;
 }) => (
-  <div className={cn("relative overflow-hidden rounded-t-xl bg-gray-100", className)}>
-    <img
+  <div className={cn("relative aspect-[4/3] overflow-hidden rounded-t-xl bg-gray-100", className)}>
+    <Image
       src={src}
       alt={alt}
-      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+      fill
+      className="object-cover transition-transform duration-300 group-hover:scale-105"
+      sizes="(max-width: 768px) 100vw, 50vw"
     />
   </div>
 );

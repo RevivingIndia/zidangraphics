@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { forwardRef, type ButtonHTMLAttributes } from "react";
 import { cn } from "@/lib/utils";
 
@@ -41,31 +40,23 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       rightIcon,
       children,
       disabled,
-      onDrag,
-      onDragStart,
-      onDragEnd,
-      onDragOver,
-      onDragEnter,
-      onDragLeave,
-      ...rest
+      ...props
     },
     ref
   ) => {
-    // Omit React's drag props so they don't conflict with Framer Motion's gesture onDrag
     return (
-      <motion.button
+      <button
         ref={ref}
         type="button"
-        whileHover={{ scale: disabled ? 1 : 1.02 }}
-        whileTap={{ scale: disabled ? 1 : 0.98 }}
         className={cn(
-          "inline-flex items-center justify-center rounded-lg font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-60",
+          "inline-flex items-center justify-center rounded-lg font-semibold transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-60",
+          "hover:scale-[1.02] active:scale-[0.98] disabled:hover:scale-100 disabled:active:scale-100",
           variantStyles[variant],
           sizeStyles[size],
           className
         )}
         disabled={disabled || isLoading}
-        {...rest}
+        {...props}
       >
         {isLoading ? (
           <span className="h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent" />
@@ -76,7 +67,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             {rightIcon && <span className="shrink-0">{rightIcon}</span>}
           </>
         )}
-      </motion.button>
+      </button>
     );
   }
 );

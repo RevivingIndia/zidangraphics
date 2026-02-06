@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import SectionHeader from "@/components/ui/SectionHeader";
 import { productCategories } from "@/data/dummy";
@@ -38,10 +39,12 @@ export default function ProductCategories() {
               <Link href={cat.href} className="group block">
                 <div className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:shadow-lg">
                   <div className="relative aspect-[4/3] overflow-hidden bg-gray-100">
-                    <img
+                    <Image
                       src={cat.image}
                       alt={cat.title}
-                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
                   </div>

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useCallback, useEffect } from "react";
@@ -52,9 +53,11 @@ export default function Testimonials() {
                   &ldquo;{current.text}&rdquo;
                 </blockquote>
                 <div className="mt-6 flex items-center gap-4">
-                  <img
+                  <Image
                     src={current.image}
                     alt={current.name}
+                    width={48}
+                    height={48}
                     className="h-12 w-12 rounded-full object-cover"
                   />
                   <div>
