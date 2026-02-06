@@ -41,10 +41,17 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       rightIcon,
       children,
       disabled,
-      ...props
+      onDrag,
+      onDragStart,
+      onDragEnd,
+      onDragOver,
+      onDragEnter,
+      onDragLeave,
+      ...rest
     },
     ref
   ) => {
+    // Omit React's drag props so they don't conflict with Framer Motion's gesture onDrag
     return (
       <motion.button
         ref={ref}
@@ -58,7 +65,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           className
         )}
         disabled={disabled || isLoading}
-        {...props}
+        {...rest}
       >
         {isLoading ? (
           <span className="h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent" />
